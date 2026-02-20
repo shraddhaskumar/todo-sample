@@ -1,0 +1,17 @@
+mongo:
+  image: mongo:6
+  username: admin
+  password: strongpassword123
+  storage: 1Gi
+  replicas: 1
+
+backend:
+  image: shraddhaskumar/updatedbackend
+  replicas: 1
+  port: 5000
+
+frontend:
+  image: shraddhaskumar/updatedfrontend 
+  replicas: 1
+  port: 5000
+  nodePort: 30020
